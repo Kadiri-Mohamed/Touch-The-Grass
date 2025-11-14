@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Touch The Grass",
+  "version": "1.0",
+  "description": "A healthy screen extension that reminds you to take breaks and touch some grass.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Touch The Grass"
+  }
+}

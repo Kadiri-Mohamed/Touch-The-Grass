@@ -1,0 +1,21 @@
+body {
+    width: 260px;
+    background: #0c1a12;
+    color: #d2f5d1;
+    font-family: Arial;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #8ae68a;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
