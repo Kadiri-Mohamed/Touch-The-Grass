@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Break Time!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0c1a12 0%, #1a2e24 100%);
+            color: #e8f5e8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .break-container {
+            max-width: 500px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 2px solid rgba(138, 230, 138, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            font-size: 80px;
+            color: #8ae68a;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #8ae68a;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #a8d5a8;
+        }
+
+        .exercise {
+            background: rgba(138, 230, 138, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #8ae68a;
+        }
+
+        .exercise h3 {
+            color: #8ae68a;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .exercise p {
+            color: #a8d5a8;
+            font-size: 16px;
+        }
+
+        .timer {
+            font-size: 48px;
+            font-weight: bold;
+            color: #8ae68a;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .continue-btn {
+            background: linear-gradient(135deg, #8ae68a 0%, #6ac06a 100%);
+            color: #0c1a12;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .continue-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(138, 230, 138, 0.3);
+        }
+
+        .tip {
+            margin-top: 30px;
+            font-style: italic;
+            color: #88cc88;
+            font-size: 14px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .countdown-text {
+            color: #a8d5a8;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="break-container">
+        <div class="icon">🌿</div>
+        <h1>Time for a Break!</h1>
+        
+        <div class="message">
+            You've been browsing for too long. Take a few minutes to refresh before continuing.
+        </div>
+
+        <div class="exercise">
+            <h3>👀 Eye Exercise</h3>
+            <p>Look at something 20 feet away for 20 seconds. Blink slowly 10 times.</p>
+        </div>
+
+        <div class="exercise">
+            <h3>🧘 Quick Stretch</h3>
+            <p>Stand up, reach for the sky, then touch your toes. Repeat 3 times.</p>
+        </div>
+
+        <div class="timer" id="countdown">05:00</div>
+        <div class="countdown-text">Break timer</div>
+
+        <button class="continue-btn" id="continueBtn">
+            Continue Browsing
+        </button>
+
+        <div class="tip">
+            💡 Tip: Stand up and walk around for better circulation
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 5 * 60; // 5 minutes in seconds
+        const countdownEl = document.getElementById('countdown');
+        const continueBtn = document.getElementById('continueBtn');
+        let countdownInterval;
+
+        function updateCountdown() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            countdownEl.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                clearInterval(countdownInterval);
+                continueBtn.textContent = "Break Complete! Continue";
+                continueBtn.disabled = false;
+            }
+        }
+
+        continueBtn.addEventListener('click', () => {
+            if (timeLeft > 0) {
+                if (confirm('Break time is not over yet. Continue anyway?')) {
+                    window.location.href = 'https://www.google.com';
+                }
+            } else {
+                window.location.href = 'https://www.google.com';
+            }
+        });
+
+        // Start the countdown
+        countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    </script>
+</body>
+</html>

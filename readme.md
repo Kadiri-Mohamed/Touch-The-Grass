@@ -1,37 +1,45 @@
-# 🌱 Touch The Grass — Chrome Extension
+# 🌱 Touch The Grass — Chrome Extension v2.0
 
 **Take healthy breaks. Reduce screen time. Touch some grass.**  
 A smart Chrome extension that tracks your browsing time and sends you gentle reminders to rest your eyes, stretch your body, and disconnect for a moment.
 
 ---
 
-## 🚀 Features
+## ✨ What's New in v2.0
 
-### 🕒 Smart Screen Time Tracking
-- Tracks how long you stay on each website  
-- Displays daily & weekly usage  
-- Shows your top time-consuming websites  
+### 🎯 Enhanced Features
+- **Customizable break intervals** - Set your own timing preferences
+- **Focus Mode** - Block distracting sites during breaks
+- **Achievement System** - Collect plants and earn rewards
+- **Export Data** - Download your statistics as JSON
+- **Idle Detection** - Don't count time when you're away
+- **Sound Notifications** - Optional audio alerts
 
-### 🔔 Intelligent Break Reminders
-- Eye-rest reminder every **20 minutes**  
-- Stretch reminder every **45 minutes**  
-- Long-session alert at **90 minutes**  
-- Notifications are calm, friendly, and non-intrusive  
+### 📊 Improved Dashboard
+- Real-time break countdown timer
+- Visual statistics with charts
+- Achievement tracker
+- Daily/weekly time tracking
+- Site visit counts
 
-### 📊 Minimal Dashboard
-- Clean popup showing:
-  - Daily total screen time  
-  - Time per website  
-  - Your “grass score” (how many breaks you've taken)  
-
-### 🌙 Dark Mode
-- Natural colors inspired by nature  
-- Smooth dark mode for night browsing  
+### ⚙️ Better Settings
+- Comprehensive settings page
+- Range sliders for interval adjustments
+- Toggle switches for features
+- Block list management
+- Data reset options
 
 ---
 
-## 📦 Installation (Developer Mode)
+## 🚀 Installation
 
-1. Download or clone the repository:
+### From Chrome Web Store (Coming Soon)
+1. Visit Chrome Web Store
+2. Search for "Touch The Grass"
+3. Click "Add to Chrome"
+
+### Developer Mode Installation
+1. Download or clone this repository:
    ```bash
    git clone https://github.com/Kadiri-Mohamed/Touch-The-Grass.git
+   cd Touch-The-Grass
