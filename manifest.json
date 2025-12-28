@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Touch The Grass",
-  "version": "1.0",
-  "description": "A healthy screen extension that reminds you to take breaks and touch some grass.",
+  "name": "Touch The Grass 🌱",
+  "version": "2.0",
+  "description": "A healthy screen extension that reminds you to take breaks and tracks your browsing habits.",
   "permissions": [
     "tabs",
     "storage",
-    "alarms",
-    "notifications"
+    "notifications",
+    "alarms"
   ],
   "background": {
     "service_worker": "background.js"
@@ -15,5 +15,12 @@
   "action": {
     "default_popup": "popup.html",
     "default_title": "Touch The Grass"
-  }
+  },
+  "options_page": "settings.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "Author": "Kadiri Mohamed"
 }

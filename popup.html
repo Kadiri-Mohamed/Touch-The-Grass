@@ -2,15 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Touch The Grass</title>
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>🌱 Touch The Grass</h1>
-    <p id="today">Loading...</p>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-leaf"></i> Touch The Grass</h1>
+            <div class="stats-header">
+                <div class="stat-box">
+                    <div class="stat-value" id="totalTime">0</div>
+                    <div class="stat-label">Minutes Today</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="breaksTaken">0</div>
+                    <div class="stat-label">Breaks Taken</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="plantsCount">0</div>
+                    <div class="stat-label">Plants</div>
+                </div>
+            </div>
+        </header>
 
-    <h2>Your top sites</h2>
-    <ul id="list"></ul>
+        <main>
+            <div class="next-break">
+                <h2><i class="fas fa-clock"></i> Next Break In</h2>
+                <div class="timer" id="nextBreakTimer">--:--</div>
+                <div class="break-type" id="nextBreakType">Loading...</div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-chart-bar"></i> Top Sites Today</h2>
+                <div id="sitesList" class="sites-list">
+                    <div class="loading">Loading...</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-trophy"></i> Achievements</h2>
+                <div id="achievements" class="achievements">
+                    <div class="loading">Loading achievements...</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="takeBreakBtn" class="btn-primary">
+                <i class="fas fa-coffee"></i> Take Break Now
+            </button>
+            <button id="settingsBtn" class="btn-secondary">
+                <i class="fas fa-cog"></i> Settings
+            </button>
+            <button id="statsBtn" class="btn-secondary">
+                <i class="fas fa-chart-line"></i> Full Stats
+            </button>
+        </footer>
+    </div>
 
     <script src="popup.js"></script>
 </body>
