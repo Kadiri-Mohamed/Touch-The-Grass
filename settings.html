@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch The Grass - Settings</title>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cog"></i> Settings</h1>
+            <p class="subtitle">Customize your Touch The Grass experience</p>
+        </header>
+
+        <main>
+            <section class="settings-section">
+                <h2><i class="fas fa-clock"></i> Break Intervals</h2>
+                <div class="setting-group">
+                    <div class="setting">
+                        <label for="eyeBreak">
+                            <i class="fas fa-eye"></i> Eye Break
+                            <span class="setting-description">Look away from screen</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="range" id="eyeBreak" min="5" max="60" step="5">
+                            <span class="value-display" id="eyeBreakValue">20 min</span>
+                        </div>
+                    </div>
+
+                    <div class="setting">
+                        <label for="stretchBreak">
+                            <i class="fas fa-person-walking"></i> Stretch Break
+                            <span class="setting-description">Stand up and stretch</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="range" id="stretchBreak" min="15" max="120" step="5">
+                            <span class="value-display" id="stretchBreakValue">45 min</span>
+                        </div>
+                    </div>
+
+                    <div class="setting">
+                        <label for="longBreak">
+                            <i class="fas fa-tree"></i> Long Break
+                            <span class="setting-description">Take a longer break</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="range" id="longBreak" min="30" max="180" step="10">
+                            <span class="value-display" id="longBreakValue">90 min</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2><i class="fas fa-bell"></i> Notifications</h2>
+                <div class="setting-group">
+                    <div class="setting toggle">
+                        <label for="soundEnabled">
+                            <i class="fas fa-volume-up"></i> Sound Notifications
+                            <span class="setting-description">Play sound with notifications</span>
+                        </label>
+                        <label class="switch">
+                            <input type="checkbox" id="soundEnabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting toggle">
+                        <label for="achievementsEnabled">
+                            <i class="fas fa-trophy"></i> Achievements
+                            <span class="setting-description">Collect plants and earn achievements</span>
+                        </label>
+                        <label class="switch">
+                            <input type="checkbox" id="achievementsEnabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2><i class="fas fa-brain"></i> Focus Mode</h2>
+                <div class="setting-group">
+                    <div class="setting toggle">
+                        <label for="focusMode">
+                            <i class="fas fa-lock"></i> Enable Focus Mode
+                            <span class="setting-description">Block distracting sites during breaks</span>
+                        </label>
+                        <label class="switch">
+                            <input type="checkbox" id="focusMode">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting">
+                        <label for="blockedSites">
+                            <i class="fas fa-ban"></i> Blocked Sites
+                            <span class="setting-description">One per line (example.com)</span>
+                        </label>
+                        <textarea id="blockedSites" rows="4" placeholder="facebook.com&#10;twitter.com&#10;instagram.com"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2><i class="fas fa-database"></i> Data Management</h2>
+                <div class="setting-group">
+                    <div class="setting">
+                        <label for="exportData">
+                            <i class="fas fa-download"></i> Export Data
+                            <span class="setting-description">Download your browsing statistics</span>
+                        </label>
+                        <button id="exportBtn" class="btn-secondary">Export as JSON</button>
+                    </div>
+
+                    <div class="setting">
+                        <label for="resetData">
+                            <i class="fas fa-trash"></i> Reset Data
+                            <span class="setting-description">Clear all stored data</span>
+                        </label>
+                        <button id="resetBtn" class="btn-danger">Reset All Data</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <button id="saveBtn" class="btn-primary">
+                <i class="fas fa-save"></i> Save Settings
+            </button>
+            <button id="cancelBtn" class="btn-secondary">
+                <i class="fas fa-times"></i> Cancel
+            </button>
+        </footer>
+
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
